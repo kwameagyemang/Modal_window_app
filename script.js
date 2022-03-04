@@ -8,20 +8,19 @@ const btnOpenModal = document.querySelectorAll('.show-modal');
 const openModal = function () {
     // this displays modal button when clicked by removing hidden class
         // theres is no . before hidden because we are just selecting class not the selector
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
-
-}
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+};
 
 const closeModal = function () {
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
-}
+};
 
 // looping over all show-model class
 for (let i = 0; i < btnOpenModal.length; i++) {
     btnOpenModal[i].addEventListener('click', openModal);
-} 
+};
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
